@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Rubik:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container {
+    padding: 20px 0;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#mainHeader {
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 90vw;
+    left: 10%;
+    background: #fff;
+    z-index: 1;
+}
+
+#mainNav a{
+    font-family:  'Rubik', sans-serif;
+    text-decoration: none;
+    color: #272727;
+    margin: 10px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 120px;
+}
+
+#mainNav a.active::before{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    background-color: #272727;
+    height: 1px;
+    width: 100px;
+    bottom: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+#mainNav a::before{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    background-color: #272727;
+    height: 1px;
+    width: 0;
+    bottom: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.porfolio-flexgrid-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.item-wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.item {
+    overflow: hidden;
+    margin: 10px;
+    min-width: 200px;
+    max-height: 100%;
+}
+
+.item .item-wrap:after {
+    z-index: 2;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+}
+
+.item .item-wrap > .work-info {
+    position: absolute;
+    top: auto;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease;
+}
+
+.item .item-wrap:hover > .work-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.item .item-wrap:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.item-wrap h3{
+    font-family:  'Rubik', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+} 
+
+.item-wrap:hover > img  {
+    filter: blur(1px);
+    max-width: 100%;
+	transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+#mainFooter {
+    font-family:  'Rubik', sans-serif;
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    color: #272727;
+    text-align: center;
+    margin: auto;
+}
+
