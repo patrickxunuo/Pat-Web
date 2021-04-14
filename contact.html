@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Site</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div id="canvas-wrap">
+      <canvas></canvas>
+        <div id="alertbox">
+          <a href="#"></a>
+          <input id="backtocon" type="back" value="OK" readonly>
+        </div>
+    </div>
+    <header id="mainHeader">
+        <div class="container">
+            <a href="index.html"><h1>Patrick Xu</h1></a>
+        </div>
+    </header>
+    <nav id="mainNav">
+        <a href="index.html" class="homBtn">Home</a>
+        <a href="photos.html" class="phoBtn">Photos</a>
+        <a href="about.html" class="aboBtn">About</a>
+        <a href="contact.html" class="conBtn active">Contact</a>
+    </nav>
+    <div class="container"> 
+        <div class="contact-grid" data-aos="fade-up">
+            <div class="contact-item name">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="contact-item email">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="contact-item subject">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject">
+            </div>
+            <div class="contact-item message">
+                <label for="message">Message</label>
+                <textarea name="message"></textarea>
+            </div>
+            <div class="contact-item info">
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <strong class="d-block mb-1">Address</strong>
+                      <span>8888 University Drive, Burnaby, British Columbia, Canada</span>
+                    </li>
+                    <li class="mb-3">
+                      <strong class="d-block mb-1">Phone</strong>
+                      <span>+1 778-751-5726</span>
+                    </li>
+                    <li class="mb-3">
+                      <strong class="d-block mb-1">Email</strong>
+                      <span>patrick@hotmail.com</span>
+                    </li>
+                  </ul>
+            </div>
+            <div class="contact-item send">
+                <input type="submit" id="submit" value="send Message">
+            </div>
+        </div>
+    </div>
+        
+    <footer id="mainFooter">
+      <div class="footer">
+        <div class="social-icon">
+          <a href="https://www.instagram.com/xunpat/" target="_blank" class="fa fa-instagram" title="Instagram"></a>
+          <a href="https://www.facebook.com/patrick.hui.9028/" target="_blank" class="fa fa-facebook" title="Facebook"></a>
+          <a href="https://twitter.com/ecc9e7a260844b5" target="_blank" class="fa fa-twitter" title="Twitter"></a>
+        </div>
+        <p>Copyright &copy; 2021 Patrick Xu</p>
+      </div>
+    </footer>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+   </body>
+</html>
