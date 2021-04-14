@@ -1,4 +1,5 @@
 const photo = document.querySelectorAll(".item-wrap");
+let slider = 1;
 
 $("#mainNav a").bind('mouseover', function(){
     $("#mainNav a").removeClass("active");
@@ -16,11 +17,6 @@ $("#mainNav a").bind('mouseout', function(){
     }
 });
 
-$(".item-wrap").bind('click', ()=>{
-    console.log($(this).attr('class'));
-    console.log('a');
-});
-
 $("#submit").bind('click',()=>{
     show_canvas();
     const name = $("input[name='name']").val();
@@ -36,6 +32,69 @@ $("#submit").bind('click',()=>{
 
 $("#backtocon").bind('click',()=>{
     hide_canvas();
+});
+
+$("#slide1").bind('click',()=>{
+    if (slider == 2){
+        $("#slide2").removeClass("active");
+        $("#slide1").addClass("active");
+        $("#homepage-2").css("position","absolute");
+        $("#homepage-2").css("left","100%");
+        $("#homepage-1").css("position","relative");
+        $("#homepage-1").css("left","0%");
+        $("#homepage-3").css("left","200%");
+    }else if(slider == 3){
+        $("#slide3").removeClass("active");
+        $("#slide1").addClass("active");
+        $("#homepage-3").css("position","absolute");
+        $("#homepage-3").css("left","200%");
+        $("#homepage-1").css("position","relative");
+        $("#homepage-1").css("left","0%");
+        $("#homepage-2").css("left","100%");
+    }
+    slider = 1;
+});
+
+$("#slide2").bind('click',()=>{
+    if (slider == 1){
+        $("#slide1").removeClass("active");
+        $("#slide2").addClass("active");
+        $("#homepage-1").css("position","absolute");
+        $("#homepage-1").css("left","-100%");
+        $("#homepage-2").css("position","relative");
+        $("#homepage-2").css("left","0%");
+        $("#homepage-3").css("left","100%");
+    }else if(slider == 3){
+        $("#slide3").removeClass("active");
+        $("#slide2").addClass("active");
+        $("#homepage-3").css("position","absolute");
+        $("#homepage-3").css("left","100%");
+        $("#homepage-2").css("position","relative");
+        $("#homepage-2").css("left","0%");
+        $("#homepage-1").css("left","-100%");
+    }
+    slider = 2;
+});
+
+$("#slide3").bind('click',()=>{
+    if (slider == 1){
+        $("#slide1").removeClass("active");
+        $("#slide3").addClass("active");
+        $("#homepage-1").css("position","absolute");
+        $("#homepage-1").css("left","-200%");
+        $("#homepage-3").css("position","relative");
+        $("#homepage-3").css("left","0%");
+        $("#homepage-2").css("left","-100%");
+    }else if(slider == 2){
+        $("#slide2").removeClass("active");
+        $("#slide3").addClass("active");
+        $("#homepage-2").css("position","absolute");
+        $("#homepage-2").css("left","-100%");
+        $("#homepage-3").css("position","relative");
+        $("#homepage-3").css("left","0%");
+        $("#homepage-1").css("left","-200%");
+    }
+    slider = 3;
 });
 
 AOS.init({

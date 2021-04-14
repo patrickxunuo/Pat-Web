@@ -12,6 +12,18 @@ body {
     margin: 0;
 }
 
+.homepage {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+.homepage > img {
+    max-height: 800px;
+}
+
 #canvas-wrap {
     display: none;
     z-index: 999;
@@ -289,6 +301,46 @@ textarea:focus {
     grid-area: 4/3/5/5;
     padding: 20px;
     height: fit-content;
+}
+
+#slide1, #slide2, #slide3 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+    background: #272727;
+    transition: 0.5s ease-in-out;
+}
+
+#slide1:hover, #slide2:hover, #slide3:hover, #slide1.active, #slide2.active, #slide3.active {
+    background: #5b5c5e;
+    transition: 0.5s ease-in-out;
+}
+
+#homepage-1 {
+    float: left;
+    overflow: visible;
+    transition: 1s ease-in-out;
+}
+
+#homepage-2 {
+    float: left;
+    left:100%;
+    overflow: visible;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+
+#homepage-3 {
+    float: left;
+    left: 200%;
+    overflow: visible;
+    position: absolute;
+    transition: 1s ease-in-out;
 }
 
 #mainFooter {
