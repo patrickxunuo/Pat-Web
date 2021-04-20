@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos | Patrick Xu</title>
+    <title>More | Patrick Xu</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -13,20 +13,20 @@
 <body>
     <header id="mainHeader">
         <div class="container">
-          <a href="index.html"><h1>Patrick Xu</h1></a>
+          <a href="index.html" class="patrickxu">Patrick Xu</a>
+          <a id="active-account" class="mainpage-account">Sign in</a>
         </div>
     </header>
     <nav id="mainNav">
         <a href="index.html" class="homBtn">Home</a>
         <a href="photos.html" class="phoBtn active">More</a>
-        <a href="about.html" class="aboBtn">About</a>
         <a href="contact.html" class="conBtn">Contact</a>
     </nav>
-    <div class="container"> 
+    <div class="main-container"> 
         <div class="porfolio-flexgrid-row" data-aos="fade-up">
             <div class="porfolio-flexgrid-column">
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#1" class="item-wrap" data-value="1">
                         <div class="work-info">
                           <h3>Raisu</h3>
                         </div>
@@ -34,7 +34,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#2" class="item-wrap">
                         <div class="work-info">
                           <h3>Cypress</h3>
                         </div>
@@ -42,7 +42,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#9" class="item-wrap">
                         <div class="work-info">
                           <h3>Whiterock</h3>
                         </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="porfolio-flexgrid-column">
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#4" class="item-wrap">
                         <div class="work-info">
                           <h3>Sea to Sky</h3>
                         </div>
@@ -60,7 +60,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#5" class="item-wrap">
                         <div class="work-info">
                           <h3>West Vancouver</h3>
                         </div>
@@ -68,7 +68,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#6" class="item-wrap">
                         <div class="work-info">
                           <h3>Cypress Peak</h3>
                         </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="porfolio-flexgrid-column">
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#7" class="item-wrap">
                         <div class="work-info">
                           <h3>Cable Car</h3>
                         </div>
@@ -86,7 +86,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#8" class="item-wrap">
                         <div class="work-info">
                           <h3>Beijing</h3>
                         </div>
@@ -94,7 +94,7 @@
                       </a>
                 </div>
                 <div class="item">
-                    <a href="#" class="item-wrap">
+                    <a href="showroom.html#3" class="item-wrap">
                         <div class="work-info">
                           <h3>Cypress Trees</h3>
                         </div>
@@ -119,13 +119,8 @@
         </template>
     </div>
         
-    <footer id="mainFooter">
+    <footer id="photo-footer">
       <div class="footer">
-        <div class="social-icon">
-          <a href="https://www.instagram.com/xunpat/" target="_blank" class="fa fa-instagram" title="Instagram"></a>
-          <a href="https://www.facebook.com/patrick.hui.9028/" target="_blank" class="fa fa-facebook" title="Facebook"></a>
-          <a href="https://twitter.com/ecc9e7a260844b5" target="_blank" class="fa fa-twitter" title="Twitter"></a>
-        </div>
         <p>Copyright &copy; 2021 Patrick Xu</p>
       </div>
     </footer>

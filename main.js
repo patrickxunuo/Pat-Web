@@ -1,4 +1,5 @@
 const photo = document.querySelectorAll(".item-wrap");
+
 let slider = 1;
 
 $("#mainNav a").bind('mouseover', function(){
@@ -17,18 +18,6 @@ $("#mainNav a").bind('mouseout', function(){
     }
 });
 
-$("#submit").bind('click',()=>{
-    show_canvas();
-    const name = $("input[name='name']").val();
-    const email = $("input[name='email']").val();
-    const subject = $("input[name='subject']").val();
-    const message = $("input[name='message']").val();
-    if (name!='' && email!='' && subject!=''&& message!=''){
-        $("#alertbox > a").text("Your message is sent.")
-    }else{
-        $("#alertbox > a").text("Please provide extra info.")
-    }
-});
 
 $("#backtocon").bind('click',()=>{
     hide_canvas();
@@ -97,6 +86,38 @@ $("#slide3").bind('click',()=>{
     slider = 3;
 });
 
+$("#submit").bind('click',()=>{
+    show_canvas();
+    const name = $("input[name='name']").val();
+    const email = $("input[name='email']").val();
+    const subject = $("input[name='subject']").val();
+    const message = $("textarea[name='message']").val();
+    if (name=='' || email=='' || subject=='' || message==''){
+        $("#alertbox > a").text("Please provide extra info.");
+    }else{
+        sendEmail(name,email,subject,message);
+        $("#alertbox > a").text("Message Sent!");
+        $("input[name='name']").val('');
+        $("input[name='email']").val('');
+        $("input[name='subject']").val('');
+        $("textarea[name='message']").val('');
+    }
+});
+
+$("#photo-1").click(function() {
+    var value = $(this).data("value");
+    // do other stuff.
+});
+
+$("#tosignin").bind('click',()=>{
+    window.location.href = "login.html";
+});
+
+$("#login-btn").bind('click',()=>{
+    login();
+});
+
+
 AOS.init({
     duration: 1200,
   });
@@ -109,4 +130,26 @@ function show_canvas() {
 function hide_canvas(){
     const canvas = document.getElementById("canvas-wrap");
     canvas.style.display = "none";
+}
+
+function sendEmail(name,email,subject,message){
+    $.ajax({
+        method: 'POST',
+        url: 'https://formsubmit.co/ajax/patrickxunuo@hotmail.com',
+        dataType: 'json',
+        data: {
+            subject: subject,
+            name: name,
+            email: email,
+            message: message
+        },
+        success: (data) => console.log(data),
+        error: (err) => console.log(err)
+    });
+}
+
+function login(){
+    let username = $("#input-username").val();
+    let password = $("#input-password").val();
+    window.location.href = "index.html";
 }
