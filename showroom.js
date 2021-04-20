@@ -1,4 +1,4 @@
-const showroomIndex = parseInt(window.location.href.substr(36));
+const showroomIndex = parseInt(window.location.href.substr(-1));
 const docHeight = $(document).height();
 const winHeight = window.innerHeight;
 console.log(showroomIndex);
